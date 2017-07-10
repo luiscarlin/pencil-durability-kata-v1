@@ -79,7 +79,6 @@ public class PencilTest {
     }
 
     @Test
-    @Ignore
     public void whenPencilWritesANewLineDurabilityShouldNotDecrease() {
         Pencil pencil = new Pencil(4);
         pencil.write("\n");
