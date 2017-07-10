@@ -10,6 +10,7 @@ public class Pencil {
 
     public void write(String text) {
         this.text += text;
+        durability--;
     }
 
     public String getText() {
