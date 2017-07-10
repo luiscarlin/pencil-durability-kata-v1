@@ -62,4 +62,11 @@ public class PencilTest {
         pencil.write("he");
         assertThat(pencil.getDurability(), is(2));
     }
+
+    @Test
+    public void whenPencilWritesASpaceDurabilityShouldNotDecrease() {
+        Pencil pencil = new Pencil(4);
+        pencil.write(" ");
+        assertThat(pencil.getDurability(), is(4));
+    }
 }

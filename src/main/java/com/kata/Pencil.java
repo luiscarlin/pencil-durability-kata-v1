@@ -10,7 +10,10 @@ public class Pencil {
 
     public void write(String text) {
         this.text += text;
-        durability -= text.length();
+
+        if (!text.equals(" ")) {
+            durability -= text.length();
+        }
     }
 
     public String getText() {
