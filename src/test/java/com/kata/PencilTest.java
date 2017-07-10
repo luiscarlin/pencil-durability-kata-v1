@@ -30,4 +30,12 @@ public class PencilTest {
     public void whenPencilIsNotUsedShouldReturnEmptyString() {
         assertThat(underTest.getText(), is(""));
     }
+
+    @Test
+    public void whenPencilWritesTextShouldBeAppended() {
+        underTest.write("first");
+        assertThat(underTest.getText(), is("first"));
+        underTest.write("second");
+        assertThat(underTest.getText(), is("firstsecond"));
+    }
 }
