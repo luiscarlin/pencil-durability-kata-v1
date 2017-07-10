@@ -1,13 +1,14 @@
 package com.kata;
 
-/**
- * Created by luis on 7/10/17.
- */
+
 public class Pencil {
+    String text;
+
     public void write(String text) {
+        this.text = text;
     }
 
     public String getText() {
-        return "text";
+        return text;
     }
 }
