@@ -25,4 +25,9 @@ public class PencilTest {
         underTest.write("anything");
         assertThat(underTest.getText(), is("anything"));
     }
+
+    @Test
+    public void whenPencilIsNotUsedShouldReturnEmptyString() {
+        assertThat(underTest.getText(), is(""));
+    }
 }
