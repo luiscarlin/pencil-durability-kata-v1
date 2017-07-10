@@ -1,6 +1,7 @@
 package com.kata;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -67,6 +68,21 @@ public class PencilTest {
     public void whenPencilWritesASpaceDurabilityShouldNotDecrease() {
         Pencil pencil = new Pencil(4);
         pencil.write(" ");
+        assertThat(pencil.getDurability(), is(4));
+    }
+
+    @Test
+    public void whenPencilWritesTwoSpacesDurabilityShouldNotDecrease() {
+        Pencil pencil = new Pencil(4);
+        pencil.write("  ");
+        assertThat(pencil.getDurability(), is(4));
+    }
+
+    @Test
+    @Ignore
+    public void whenPencilWritesANewLineDurabilityShouldNotDecrease() {
+        Pencil pencil = new Pencil(4);
+        pencil.write("\n");
         assertThat(pencil.getDurability(), is(4));
     }
 }
