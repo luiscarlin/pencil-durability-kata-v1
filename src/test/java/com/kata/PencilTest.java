@@ -55,4 +55,11 @@ public class PencilTest {
         pencil.write("h");
         assertThat(pencil.getDurability(), is(3));
     }
+
+    @Test
+    public void whenPencilWritesTwoCharsDurabilityDiminishesByTwo() {
+        Pencil pencil = new Pencil(4);
+        pencil.write("he");
+        assertThat(pencil.getDurability(), is(2));
+    }
 }
