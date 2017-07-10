@@ -11,7 +11,7 @@ public class PencilTest {
 
     @Before
     public void setup() {
-        underTest = new Pencil();
+        underTest = new Pencil(0);
     }
 
     @Test
@@ -37,5 +37,11 @@ public class PencilTest {
         assertThat(underTest.getText(), is("first"));
         underTest.write("second");
         assertThat(underTest.getText(), is("firstsecond"));
+    }
+
+    @Test
+    public void whenICreateAPencilDurabilityCanBeSetAndCaBeRetrieved() {
+        Pencil pencil = new Pencil(1);
+        assertThat(pencil.getDurability(), is(1));
     }
 }
