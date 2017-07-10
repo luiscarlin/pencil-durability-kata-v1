@@ -2,8 +2,10 @@ package com.kata;
 
 public class Pencil {
     private String text = "";
+    private int durability;
 
-    public Pencil(int i) {
+    public Pencil(int durability) {
+        this.durability = durability;
     }
 
     public void write(String text) {
@@ -15,6 +17,6 @@ public class Pencil {
     }
 
     public int getDurability() {
-        return 1;
+        return durability;
     }
 }

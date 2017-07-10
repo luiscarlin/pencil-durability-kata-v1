@@ -43,5 +43,9 @@ public class PencilTest {
     public void whenICreateAPencilDurabilityCanBeSetAndCaBeRetrieved() {
         Pencil pencil = new Pencil(1);
         assertThat(pencil.getDurability(), is(1));
+
+        Pencil secondPencil = new Pencil(2);
+        assertThat(secondPencil.getDurability(), is(2));
+
     }
 }
