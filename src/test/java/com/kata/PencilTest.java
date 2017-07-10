@@ -84,4 +84,11 @@ public class PencilTest {
         pencil.write("\n");
         assertThat(pencil.getDurability(), is(4));
     }
+
+    @Test
+    public void whenPencilWritesTextWithSpacesTheyShouldBeMaintained() {
+        Pencil pencil = new Pencil(27);
+        pencil.write("this is a text with spaces");
+        assertThat(pencil.getText(), is("this is a text with spaces"));
+    }
 }
