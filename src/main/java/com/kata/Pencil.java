@@ -1,8 +1,7 @@
 package com.kata;
 
-
 public class Pencil {
-    String text = "";
+    private String text = "";
 
     public void write(String text) {
         this.text = text;
