@@ -14,7 +14,6 @@ public class Pencil {
         text = text.replace("\n", "");
 
         durability -= text.length();
-
     }
 
     public String getText() {
