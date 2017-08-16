@@ -20,6 +20,9 @@ public class Pencil {
             }
 
             if (Character.isUpperCase(c)) {
+                if (durability < 2) {
+                    continue;
+                }
                 durability -= 2;
             }
             else {

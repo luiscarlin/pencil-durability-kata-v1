@@ -112,4 +112,12 @@ public class PencilTest {
         assertThat(pencil.getText(), is("hel"));
         assertThat(pencil.getDurability(), is(0));
     }
+
+    @Test
+    public void whenPencilWritesUppercaseLetterAndDurabilityIsOneThenNoTextIsWritten() {
+        Pencil pencil = new Pencil(1);
+        pencil.write("H");
+        assertThat(pencil.getText(), is(""));
+        assertThat(pencil.getDurability(), is(1));
+    }
 }
