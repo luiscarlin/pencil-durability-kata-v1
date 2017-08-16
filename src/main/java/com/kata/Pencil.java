@@ -9,17 +9,23 @@ public class Pencil {
     }
 
     public void write(String text) {
-        this.text += text;
-        text = text.replace(" ", "");
-        text = text.replace("\n", "");
-
         for (char c : text.toCharArray()) {
+            if (durability == 0) {
+                break;
+            }
+            if (Character.isWhitespace(c)) {
+                this.text += c;
+                continue;
+            }
+
             if (Character.isUpperCase(c)) {
                 durability -= 2;
             }
             else {
                 durability -= 1;
             }
+
+            this.text += c;
         }
     }
 

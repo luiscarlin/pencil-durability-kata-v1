@@ -104,4 +104,12 @@ public class PencilTest {
         pencil.write("T");
         assertThat(pencil.getDurability(), is(2));
     }
+
+    @Test
+    public void whenPencilRunsOutOfDurabilityNoTextIsWritten() {
+        Pencil pencil = new Pencil(3);
+        pencil.write("hello");
+        assertThat(pencil.getText(), is("hel"));
+        assertThat(pencil.getDurability(), is(0));
+    }
 }
