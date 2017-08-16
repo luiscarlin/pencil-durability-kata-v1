@@ -13,7 +13,16 @@ public class Pencil {
         text = text.replace(" ", "");
         text = text.replace("\n", "");
 
-        durability -= text.length();
+        for (int i = 0; i < text.length(); i++){
+            char c = text.charAt(i);
+
+            if (Character.isUpperCase(c)) {
+                durability -= 2;
+            }
+            else {
+                durability -= 1;
+            }
+        }
     }
 
     public String getText() {

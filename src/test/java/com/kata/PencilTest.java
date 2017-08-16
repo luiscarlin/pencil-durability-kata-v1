@@ -97,4 +97,11 @@ public class PencilTest {
         pencil.write("t");
         assertThat(pencil.getDurability(), is(3));
     }
+
+    @Test
+    public void whenPencilWritesACapitalLetterThenDurabilityDecreasesByTwo() {
+        Pencil pencil = new Pencil(4);
+        pencil.write("T");
+        assertThat(pencil.getDurability(), is(2));
+    }
 }
