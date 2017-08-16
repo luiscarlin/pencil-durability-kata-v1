@@ -90,4 +90,11 @@ public class PencilTest {
         pencil.write("this is a text with spaces");
         assertThat(pencil.getText(), is("this is a text with spaces"));
     }
+
+    @Test
+    public void whenPencilWritesALowercaseLetterThenDurabilityDecreasesByOne() {
+        Pencil pencil = new Pencil(4);
+        pencil.write("t");
+        assertThat(pencil.getDurability(), is(3));
+    }
 }
