@@ -13,6 +13,7 @@ public class Pencil {
             if (durability == 0) {
                 break;
             }
+
             if (Character.isWhitespace(c)) {
                 this.text += c;
                 continue;
