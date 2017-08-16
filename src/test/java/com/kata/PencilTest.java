@@ -7,36 +7,36 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 public class PencilTest {
-    private Pencil underTest;
+    private Pencil writeTestPencil;
 
     @Before
     public void setup() {
-        underTest = new Pencil(0);
+        writeTestPencil = new Pencil(100);
     }
 
     @Test
     public void whenPencilWritesTextIsStored() {
-        underTest.write("text");
-        assertThat(underTest.getText(), is("text"));
+        writeTestPencil.write("text");
+        assertThat(writeTestPencil.getText(), is("text"));
     }
 
     @Test
     public void whenPencilWritesAnythingTextIsStored() {
-        underTest.write("anything");
-        assertThat(underTest.getText(), is("anything"));
+        writeTestPencil.write("anything");
+        assertThat(writeTestPencil.getText(), is("anything"));
     }
 
     @Test
     public void whenPencilIsNotUsedShouldReturnEmptyString() {
-        assertThat(underTest.getText(), is(""));
+        assertThat(writeTestPencil.getText(), is(""));
     }
 
     @Test
     public void whenPencilWritesTextShouldBeAppended() {
-        underTest.write("first");
-        assertThat(underTest.getText(), is("first"));
-        underTest.write("second");
-        assertThat(underTest.getText(), is("firstsecond"));
+        writeTestPencil.write("first");
+        assertThat(writeTestPencil.getText(), is("first"));
+        writeTestPencil.write("second");
+        assertThat(writeTestPencil.getText(), is("firstsecond"));
     }
 
     @Test
